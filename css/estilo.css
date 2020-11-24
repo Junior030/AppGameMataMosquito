@@ -13,3 +13,11 @@ body{
 .mosca3{
     width: 70px;
 }
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
