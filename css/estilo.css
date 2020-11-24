@@ -1,6 +1,5 @@
-body{
-    
-    background: url(../imagens/bg.jpg) top center no-repeat;    
+body{    
+    background: url(../imagens/bg.jpg);    
     background-attachment: fixed;
     background-size: 100%;
 }
