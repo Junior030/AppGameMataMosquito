@@ -1,5 +1,5 @@
 body{    
-    background: url(../imagens/bg.jpg);    
+    background-image: url(../imagens/bg.jpg);    
     background-attachment: fixed;
     background-size: 100%;
 }
@@ -20,4 +20,26 @@ body{
 
 .ladoB{
     transform: scaleX(-1);
+}
+
+
+/* Estilo do painel de vida*/
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: 1px solid #fff;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.vidas{
+    float: left;
+}
+.tempo{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
 }

@@ -1,5 +1,7 @@
-var altura;
-var largura;
+var altura = 0;
+var largura = 0;
+var vidas = 1;
+
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight;
     largura = window.innerWidth;
@@ -13,8 +15,17 @@ function posicaoRondomica() {
     //remover o mosquito anterior caso exista
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove();
+
+        if (vidas <= 3) {
+            document.getElementById('coracao' + vidas).src = 'imagens/coracao_vazio.png';
+            vidas++;
+        } else {
+            
+        }
+        
     }
-   
+
+
 
     var positionX = Math.floor(Math.random() * largura) - 90;
     var positionY = Math.floor(Math.random() * altura) - 90;
@@ -29,12 +40,14 @@ function posicaoRondomica() {
     mosquito.style.left = positionX + 'px';
     mosquito.style.top = positionY + 'px';
     mosquito.style.position = 'absolute';
-
     mosquito.id = 'mosquito';
+    mosquito.onclick = function () {
+        this.remove();
+    }
 
     document.body.appendChild(mosquito);
 
-    
+
 }
 
 function tamanhoAleatorio() {
@@ -50,7 +63,7 @@ function tamanhoAleatorio() {
     }
 }
 
-function ladoAleatorio(){
+function ladoAleatorio() {
     var classe = Math.floor(Math.random() * 2);
 
     switch (classe) {
@@ -58,6 +71,6 @@ function ladoAleatorio(){
             return 'ladoA';
         case 1:
             return 'ladoB';
-        
-    } 
+
+    }
 }
