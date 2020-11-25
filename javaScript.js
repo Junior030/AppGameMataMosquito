@@ -1,6 +1,7 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
+var tempo = 10;
 
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight;
@@ -8,7 +9,13 @@ function ajustaTamanhoPalcoJogo() {
 }
 
 ajustaTamanhoPalcoJogo();
-
+var cronometro = setInterval(function() {
+    tempo -= 1;
+    document.getElementById('cronometro').innerHTML = tempo;
+    if (tempo == 0) {
+        window.location.href = 'vitoria.html';
+    }
+}, 1000);
 
 function posicaoRondomica() {
 
@@ -20,7 +27,7 @@ function posicaoRondomica() {
             document.getElementById('coracao' + vidas).src = 'imagens/coracao_vazio.png';
             vidas++;
         } else {
-            
+            window.location.href = 'FimJogo.html';
         }
         
     }
