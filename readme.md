@@ -3,7 +3,7 @@
 </h1>
 
 <h1>   
-    <img src="gif/MataMosquito.gif">
+    <img src="Gif/MataMosquito.gif">
 </h1>
 
 ## 📝 Sobre
