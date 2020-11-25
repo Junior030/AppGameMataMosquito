@@ -36,9 +36,11 @@
 
 
     <script>   
-    setInterval(function() {
-        posicaoRondomica();
-    }, 2000)
+      document.getElementById('cronometro').innerHTML = tempo;
+       
+      var criaMosca = setInterval(function() {
+          posicaoRondomica();
+      }, criaMosquitoTempo);
     </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
