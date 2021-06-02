@@ -28,9 +28,7 @@ O projeto foi desenvolvido utilizando a seguintes tecnologias
 
     $ cd Finans
 
-    $ yarn install
-
-    $ yarn start
+    $ xdg-open hello.html
 ```
 
 ---
